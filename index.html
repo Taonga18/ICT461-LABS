@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICT461 · Course Registration</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <main class="container">
+        <h1>Course Registration</h1>
+        <p class="subtitle">ICT461 · Web Systems and Technology</p>
+
+        <div id="message" class="message"></div>
+
+        <form id="regForm" novalidate>
+            <div class="field">
+                <label for="fullName">Full Name *</label>
+                <input type="text" id="fullName" placeholder="e.g. Chanda Mwansa">
+                <span class="error" id="nameError"></span>
+            </div>
+
+            <div class="field">
+                <label for="studentId">Student ID *</label>
+                <input type="text" id="studentId" placeholder="e.g. 202412345">
+                <span class="error" id="idError"></span>
+            </div>
+
+            <div class="field">
+                <label for="programme">Programme *</label>
+                <select id="programme">
+                    <option value="">— Select programme —</option>
+                    <option value="CS">BSc Computer Science</option>
+                    <option value="IT">BSc Information Technology</option>
+                    <option value="SE">BSc Software Engineering</option>
+                </select>
+                <span class="error" id="programmeError"></span>
+            </div>
+
+            <div class="field">
+                <label>Select Course *</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="course" value="ICT461"> ICT461 — Web Systems</label>
+                    <label><input type="radio" name="course" value="ICT462"> ICT462 — Advanced Web</label>
+                    <label><input type="radio" name="course" value="ICT463"> ICT463 — HCI</label>
+                </div>
+                <span class="error" id="courseError"></span>
+            </div>
+
+            <div class="field checkbox">
+                <label>
+                    <input type="checkbox" id="terms">
+                    I agree to the registration terms *
+                </label>
+                <span class="error" id="termsError"></span>
+            </div>
+
+            <div class="buttons">
+                <button type="button" id="resetBtn" class="btn-secondary">Clear</button>
+                <button type="submit" class="btn-primary">Register</button>
+            </div>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
